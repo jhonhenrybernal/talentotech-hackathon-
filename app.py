@@ -17,7 +17,7 @@ with open('M4_DataTecnologia.json') as f:
 
 # Ruta para la página principal (index.html)
 @app.route('/')
-def home():
+def about():
     return render_template('about.html')
 
 @app.route('/index')
