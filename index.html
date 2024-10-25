@@ -73,8 +73,8 @@
         async function obtenerPrediccion() {
             const sector = document.getElementById('sector').value;
             try {
-                const response = await axios.get(`http://localhost:5000/prediccion?sector=${sector}`); // este es para local
-                //const response = await axios.get(/prediccion?sector=${sector}); // render
+                //const response = await axios.get(`http://localhost:5000/prediccion?sector=${sector}`); // este es para local
+                const response = await axios.get(/prediccion?sector=${sector}); // render
                 document.getElementById('resultado').innerHTML = `<img src="data:image/png;base64,${response.data.grafico}" alt="Predicción gráfica"/>`;
             } catch (error) {
                 console.error('Error al obtener la predicción', error);
