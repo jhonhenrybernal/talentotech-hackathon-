@@ -16,6 +16,10 @@ with open('M4_DataTecnologia.json') as f:
     data = json.load(f)
 
 # Ruta para la página principal (index.html)
+@app.route('/')
+def home():
+    return render_template('about.html')
+
 @app.route('/index')
 def home():
     return render_template('index.html')
