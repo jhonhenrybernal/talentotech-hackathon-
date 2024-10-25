@@ -1,6 +1,6 @@
 # MDV - Modelo Predicción para Ventas
 
-(logo.jpg)
+![Logo de la Empresa](logo.jpg)
 
 **Segmenta, Analiza y encuentra Oportunidades en el Mercado de la Tecnología**
 
