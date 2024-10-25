@@ -21,12 +21,12 @@ def about():
     return render_template('about.html')
 
 @app.route('/index')
-def home():
+def predicciones():
     return render_template('index.html')
 
 
 @app.route('/home')
-def predicciones():
+def home():
     return render_template('home.html')
 
 # Función para generar predicciones usando Prophet
