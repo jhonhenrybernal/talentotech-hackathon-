@@ -16,9 +16,14 @@ with open('M4_DataTecnologia.json') as f:
     data = json.load(f)
 
 # Ruta para la página principal (index.html)
-@app.route('/')
+@app.route('/index')
 def home():
     return render_template('index.html')
+
+
+@app.route('/home')
+def predicciones():
+    return render_template('home.html')
 
 # Función para generar predicciones usando Prophet
 def generar_prediccion(sector):

@@ -1,0 +1,123 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0F28;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo de los encabezados específicos en la barra lateral */
+.sidebar h2 {
+    font-size: 0.8rem; /* Reducido el tamaño de letra */
+    margin-bottom: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141A3B;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    text-align: left;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #1A2145;
+    padding: 20px;
+    width: 250px;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-top: 10px;
+    font-size: 0.8rem; /* Tamaño de la fuente reducido */
+}
+
+.options label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Sección de contenido */
+.content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    overflow: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0A0F28;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-media a {
+    margin: 0 5px;
+    text-align: left;
+}
+
+/* Clase adicional para otros estilos */
+.terminos {
+    background-color: white;
+}
+.titulo {
+    font-size: 1.2rem;
+    color: #B0C4DE;
+    margin-left: 20px;
+    text-align: left; /* Alineación a la izquierda */
+}
+

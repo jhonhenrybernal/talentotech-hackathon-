@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPV - Modelo de Predicción para Ventas</title>
+    <link rel="stylesheet" href="styleinicio.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+            <div class="logo-section">
+                    <img src="./assets/logo2.png" alt="MPV Logo" class="logo-img" style="width: 400px; height: 400px;">
+                    <div class="logo-text">
+                        <h1>MPV</h1>
+                        <p>Modelo Predicción para Ventas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-title">
+                <h2>Segmenta, Analiza y encuentra Oportunidades en el Mercado de la Tecnología.</h2>
+            </div>
+            <div class="home-button">
+                <form action="/inicio" method="POST">
+                    <a href="#" title="Inicio" onclick="irAPagina()">
+                        <div class="button-circle">
+                            <img src="./assets/power_button_icon.ico" alt="Inicio" style="width: 60px; height: 60px;">
+                        </div>
+                    </a >
+                        <span>Inicio</span>
+                    </a>
+                </form>
+            </div>
+        </header>
+        
+        <main>
+            <div class="icon-section">
+                <div class="icon-item">
+                    <img src="./assets/segmenta.png" alt="Segmenta" style="width: 100px; height: 100px;">
+                    <p>Segmenta</p>
+                </div>
+                <div class="icon-item">
+                    <img src="./assets/Analiza.webp" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
+                    <p>Analiza y Proyecta</p>
+                </div>
+                <div class="icon-item" onclick="predicciones()">
+                    <img src="./assets/encuentra.webp" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
+                    <p>Encuentra Oportunidades de Mercado</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright © 2024 | MPV - Modelo de Predicción para Ventas | Bogotá - Colombia | 
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Términos y Condiciones</a> | 
+                <a href="#">Política de Cookies</a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function irAPagina() {
+            // Cambia 'pagina.html' por la ruta de la página a la que quieres ir
+            window.location.href = 'about.html';
+        }
+        function predicciones() {
+            // Cambia 'pagina.html' por la ruta de la página a la que quieres ir
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

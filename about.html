@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPV - Modelo de Predicción para Ventas</title>
+    <link rel="stylesheet" href="./styleindex.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/logo2.png" alt="MPV Logo">
+            <h1>MPV</h1>
+            <p>Modelo Predicción para Ventas</p>
+        </div>
+
+        <div class="form-container">
+            <h2>Sign up</h2>
+            <form id="formularioRegistro">
+                <div class="input-group">
+                    <input type="text" id='nombre' placeholder="First name...">
+                    <input type="text" placeholder="Last name...">
+                </div>
+                <input type="email" placeholder="Email address...">
+                <input type="password" placeholder="Password...">
+                <button id="botonEnviar" type="button">Sign up</button>
+                <p>Already a member? <a href="#">Sign In</a></p>
+            </form>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <img src="./assets/segmenta.webp" alt="Segmenta" style="width: 100px; height: 100px;">
+                <p>Segmenta</p>
+            </div>
+            <div class="feature-item">
+                <img src="./assets/Analiza.webp" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
+                <p>Analiza y Proyecta</p>
+            </div>
+            <div class="feature-item">
+                <img src="./assets/encuentra.webp" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
+                <p>Encuentra Oportunidades de Mercado</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2024 | MPV - Modelo de Predicción para Ventas | Bogotá - Colombia | 
+           <a href="#">Política de Privacidad</a> | 
+           <a href="#">Términos y Condiciones</a> | 
+           <a href="#">Política de Cookies</a>
+        </p>
+    </footer>
+    <script>
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona el formulario y el botón
+    const formulario = document.getElementById('formularioRegistro');
+    const botonEnviar = document.getElementById('botonEnviar');
+
+    // Agrega un evento de clic al botón
+    botonEnviar.addEventListener('click', () => {
+        // Verifica si el formulario es válido
+        if (formulario.checkValidity()) {
+            // Obtén el valor del campo "nombre"
+            const nombre = document.getElementById('nombre').value;
+
+            // Almacena el nombre en sessionStorage
+            sessionStorage.setItem('nombreUsuario', nombre);
+
+            // Redirige a la segunda página si el formulario está lleno
+            window.location.href = 'home.html';
+        } else {
+            // Muestra un mensaje si faltan campos
+            alert('Por favor, completa todos los campos del formulario.');
+        }
+    });
+});
+    </script>
+</body>
+</html>

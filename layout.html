@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPV - Modelo de Predicción para Ventas</title>
+    <link rel="stylesheet" href="/static/styleabout.css">
+    <script defer src="second-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./assets/logo2.png" style="width: 80px; height: 80px;" alt="MPV Logo">
+                <h1>MPV</h1>
+            </div>
+            <p class="titulo">Segmenta, Analiza y encuentra Oportunidades de Mercado.</p>
+            <div class="user-info">
+                <!--<p>Bienvenido, Raúl</p>-->
+                <p id="mensajeBienvenida">Bienvenido, </p>
+                <img src="./assets/Iconopersona.webp" style="width: 40px; height: 40px;" alt="User Icon">
+            </div>   
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <form action="/seleccionar" method="POST">
+                <h2>Selecciona un Rango de Empresa</h2>
+                <select>
+                    <option>Tipo de Empresa</option>
+                </select>
+                
+                <h2>Selecciona uno o Varios Servicios</h2>
+                <select>
+                    <option>Sectores</option>
+                    <option for="total_comercio">Total comercio</option>
+                    <option for="total_industria">Total industria</option>
+                    <option for="servicios">Servicios</option>
+                    <option for="correo">Correo y almacenamiento</option>
+                    <option for="alojamiento">Alojamiento</option>
+                </select>
+                
+                <h2>Selecciona Categoría de Consulta</h2>
+                <select>
+                    <option>Categorías</option>
+                </select>
+                </form>
+                <h2>Selecciona Resultado</h2>
+                <div class="options">
+                    <label><input type="radio" name="result" checked> Proyección Anual</label>
+                    <label><input type="radio" name="result"> Análisis Gráfica</label>
+                    <label><input type="radio" name="result"> Estrategia o Recomendaciones</label>
+                </div>
+            </aside>
+            <section class="content">
+                <div class="table-container">
+                    <!-- Aquí puedes incrustar la tabla HTML o generar dinámicamente con datos -->
+                    <img src="table-image.png" alt="Tabla de datos">
+                </div>
+            </section>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="./assets/facebook.webp" style="width: 50px; height: 50px;" alt="Facebook"></a>
+            <a href="#"><img src="./assets/instagram.webp" style="width: 50px; height: 50px;" alt="Instagram"></a>
+            <a href="#"><img src="./assets/youtube.webp" style="width: 50px; height: 50px;" alt="YouTube"></a>
+            <a href="#"><img src="./assets/Gmail.webp" style="width: 50px; height: 50px;" alt="Email"></a>
+        </div>
+        <footer>
+            <p>Copyright © 2024 | MPV - Modelo de Predicción para Ventas | Bogotá - Colombia | 
+                <a  href="#">Política de Privacidad</a> | 
+                <a  href="#">Términos y Condiciones</a> | 
+                <a  href="#">Política de Cookies</a>
+            </p>
+        </footer>
+        <script>
+             // Función para obtener datos desde una API de ejemplo y desde nuestro backend en Flask
+             axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => {
+                console.log('Datos obtenidos de jsonplaceholder:', response.data);
+            })
+            .catch(error => {
+                console.error('Error al obtener datos de jsonplaceholder', error);
+            });
+
+        // Función para obtener la predicción del servidor Flask
+        async function obtenerPrediccion() {
+            const sector = document.getElementById('sector').value;
+            try {
+                const response = await axios.get(`http://localhost:5500/prediccion?sector=${sector}`);
+                document.getElementById('resultado').innerHTML = `<img src="data:image/png;base64,${response.data.grafico}" alt="Predicción gráfica"/>`;
+            } catch (error) {
+                console.error('Error al obtener la predicción', error);
+                document.getElementById('resultado').innerHTML = 'Error al obtener la predicción';
+            }
+            console.log(sector);
+        }
+            // second-script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Recupera el nombre almacenado en sessionStorage
+    const nombreUsuario = sessionStorage.getItem('nombreUsuario');
+
+    // Selecciona el elemento donde se mostrará el mensaje de bienvenida
+    const mensajeBienvenida = document.getElementById('mensajeBienvenida');
+
+    // Inserta el nombre en la línea de bienvenida
+    if (nombreUsuario) {
+        mensajeBienvenida.innerHTML = `Bienvenido, ${nombreUsuario}`;
+    } else {
+        mensajeBienvenida.innerHTML = 'Bienvenido, Usuario Anónimo';
+    }
+});
+        </script>
+    </div>
+</body>
+</html>

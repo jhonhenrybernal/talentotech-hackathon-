@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0F28; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #0A0F28; /* Mismo color que el fondo */
+    border-bottom: 2px solid #1A2145;
+    position: relative;
+}
+
+/* Ajustes para la sección del logotipo */
+.logo-section {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para alinear verticalmente */
+    align-items: center;    /* Centra el contenido horizontalmente */
+    text-align: center;
+}
+
+.logo-img {
+    width: 1px;
+    height: 1px;
+    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+    opacity: 0.8; /* 80% opaca, 20% transparente */
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #4DA8DA; /* Azul claro */
+}
+
+.logo-text p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #4DA8DA;
+    font-weight: 300; /* Texto más delgado */
+}
+
+
+.page-title h2 {
+    font-size: 1.6rem;
+    color: #B0C4DE;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Botón de Inicio */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #0093E9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.button-circle img {
+    align-items: center;
+}
+
+.button-circle:hover {
+    background-color: #00A9FF; /* Cambio de color en hover */
+}
+
+.home-button span {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #B0C4DE;
+}
+
+/* Sección de iconos */
+.icon-section {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    gap: 40px; /* Espacio uniforme entre iconos */
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s;
+}
+
+.icon-item img:hover {
+    transform: scale(1.1); /* Efecto zoom en hover */
+}
+
+.icon-item p {
+    font-size: 0.7rem;
+    color: #B0C4DE;
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+/* Animación de líneas de fondo */
+@keyframes wave-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.background-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 200px;
+    background: url('./assets/wave.png') repeat-x;
+    animation: wave-animation 10s linear infinite;
+    opacity: 0.5;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0A0F28;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 2px solid #1A2145;
+    margin-top: auto; /* Asegura que el pie de página esté en la parte inferior */
+}
+
+footer a {
+    color: #4DA8DA;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
