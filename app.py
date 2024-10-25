@@ -23,7 +23,11 @@ def home():
 # Función para generar predicciones usando Prophet
 def generar_prediccion(sector):
     # Filtrar datos según el sector
-    datos_sector = [d for d in data if d['Sector'] == sector][0]
+    datos_sector = [d for d in data if d['Sector'] == sector]
+    if not datos_sector:
+        return None
+
+    datos_sector = datos_sector[0]
     
     # Crear un DataFrame simulado para Prophet
     fechas = pd.date_range(start='2024-01-01', periods=12, freq='M')
@@ -57,6 +61,9 @@ def prediccion():
         return jsonify({"error": "Sector no especificado"}), 400
 
     grafico = generar_prediccion(sector)
+    if grafico is None:
+        return jsonify({"error": "Sector no encontrado"}), 404
+    
     return jsonify({"grafico": grafico})
 
 if __name__ == '__main__':
