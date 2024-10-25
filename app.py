@@ -9,7 +9,7 @@ from prophet import Prophet
 import json
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para toda la aplicación
+CORS(app, resources={r"/*": {"origins": "*"}})  # Permitir CORS para todas las rutas y orígenes  # Habilita CORS para toda la aplicación
 
 # Cargar datos del archivo JSON
 with open('M4_DataTecnologia.json') as f:
