@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPV - Modelo de Predicción para Ventas</title>
-    <link rel="stylesheet" href="/static/styleabout.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleabout.css') }}">
     <script defer src="second-script.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="./assets/logo2.png" style="width: 80px; height: 80px;" alt="MPV Logo">
+                <img src="{{ url_for('static', filename='assets/logo2.png') }}" style="width: 80px; height: 80px;" alt="MPV Logo">
                 <h1>MPV</h1>
             </div>
             <p class="titulo">Segmenta, Analiza y encuentra Oportunidades de Mercado.</p>
             <div class="user-info">
                 <!--<p>Bienvenido, Raúl</p>-->
                 <p id="mensajeBienvenida">Bienvenido, </p>
-                <img src="./assets/Iconopersona.webp" style="width: 40px; height: 40px;" alt="User Icon">
+                <img src="{{ url_for('static', filename='assets/Iconopersona.webp') }}" style="width: 40px; height: 40px;" alt="User Icon">
             </div>   
         </header>
         <div class="main-content">
@@ -59,10 +59,10 @@
             </section>
         </div>
         <div class="social-media">
-            <a href="#"><img src="./assets/facebook.webp" style="width: 50px; height: 50px;" alt="Facebook"></a>
-            <a href="#"><img src="./assets/instagram.webp" style="width: 50px; height: 50px;" alt="Instagram"></a>
-            <a href="#"><img src="./assets/youtube.webp" style="width: 50px; height: 50px;" alt="YouTube"></a>
-            <a href="#"><img src="./assets/Gmail.webp" style="width: 50px; height: 50px;" alt="Email"></a>
+            <a href="#"><img src="{{ url_for('static', filename='assets/facebook.webp') }}" style="width: 50px; height: 50px;" alt="Facebook"></a>
+            <a href="#"><img src="{{ url_for('static', filename='assets/instagram.webp') }}" style="width: 50px; height: 50px;" alt="Instagram"></a>
+            <a href="#"><img src="{{ url_for('static', filename='assets/youtube.webp') }}" style="width: 50px; height: 50px;" alt="YouTube"></a>
+            <a href="#"><img src="{{ url_for('static', filename='assets/Gmail.webp') }}" style="width: 50px; height: 50px;" alt="Email"></a>
         </div>
         <footer>
             <p>Copyright © 2024 | MPV - Modelo de Predicción para Ventas | Bogotá - Colombia | 

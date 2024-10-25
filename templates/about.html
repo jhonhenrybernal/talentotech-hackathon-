@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="./assets/logo2.png" alt="MPV Logo">
+            <img src="{{ url_for('static', filename='assets/logo2.png') }}" alt="MPV Logo">
             <h1>MPV</h1>
             <p>Modelo Predicción para Ventas</p>
         </div>
@@ -31,15 +31,15 @@
 
         <div class="features">
             <div class="feature-item">
-                <img src="./assets/segmenta.webp" alt="Segmenta" style="width: 100px; height: 100px;">
+                <img src="{{ url_for('static', filename='assets/segmenta.webp') }}" alt="Segmenta" style="width: 100px; height: 100px;">
                 <p>Segmenta</p>
             </div>
             <div class="feature-item">
-                <img src="./assets/Analiza.webp" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
+                <img src="{{ url_for('static', filename='assets/Analiza.webp') }}" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
                 <p>Analiza y Proyecta</p>
             </div>
             <div class="feature-item">
-                <img src="./assets/encuentra.webp" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
+                <img src="{{ url_for('static', filename='assets/Analiza.webp') }}" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
                 <p>Encuentra Oportunidades de Mercado</p>
             </div>
         </div>

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPV - Modelo de Predicción para Ventas</title>
-    <link rel="stylesheet" href="styleinicio.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleinicio.css') }}">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo-section">
             <div class="logo-section">
-                    <img src="./assets/logo2.png" alt="MPV Logo" class="logo-img" style="width: 400px; height: 400px;">
+                    <img src="{{ url_for('static', filename='assets/logo2.png') }}" alt="MPV Logo" class="logo-img" style="width: 400px; height: 400px;">
                     <div class="logo-text">
                         <h1>MPV</h1>
                         <p>Modelo Predicción para Ventas</p>
@@ -25,7 +25,7 @@
                 <form action="/inicio" method="POST">
                     <a href="#" title="Inicio" onclick="irAPagina()">
                         <div class="button-circle">
-                            <img src="./assets/power_button_icon.ico" alt="Inicio" style="width: 60px; height: 60px;">
+                            <img src="{{ url_for('static', filename='assets/power_button_icon.ico') }}" alt="Inicio" style="width: 60px; height: 60px;">
                         </div>
                     </a >
                         <span>Inicio</span>
@@ -37,15 +37,15 @@
         <main>
             <div class="icon-section">
                 <div class="icon-item">
-                    <img src="./assets/segmenta.png" alt="Segmenta" style="width: 100px; height: 100px;">
+                    <img src="{{ url_for('static', filename='assets/segmenta.png') }}" alt="Segmenta" style="width: 100px; height: 100px;">
                     <p>Segmenta</p>
                 </div>
                 <div class="icon-item">
-                    <img src="./assets/Analiza.webp" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
+                    <img src="{{ url_for('static', filename='assets/Analiza.webp') }}" alt="Analiza y Proyecta" style="width: 100px; height: 100px;">
                     <p>Analiza y Proyecta</p>
                 </div>
                 <div class="icon-item" onclick="predicciones()">
-                    <img src="./assets/encuentra.webp" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
+                    <img src="{{ url_for('static', filename='assets/encuentra.webp') }}" alt="Encuentra Oportunidades" style="width: 100px; height: 100px;">
                     <p>Encuentra Oportunidades de Mercado</p>
                 </div>
             </div>
