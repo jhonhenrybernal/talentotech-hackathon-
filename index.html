@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción y Análisis de Mercado</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Predicción de 6 a 12 meses</h1>
+    
+    <label for="sector">Seleccione un sector:</label>
+    <select id="sector">
+        <option value="Total comercio1">Total comercio</option>
+        <option value="Total industria2">Total industria</option>
+        <option value="H Correo y almacenamiento">Correo y almacenamiento</option>
+        <option value="I1 Alojamiento">Alojamiento</option>
+        <option value="I2 Servicios de comidas y bebidas">Servicios de comidas y bebidas</option>
+        <!-- Agrega más sectores según el archivo JSON -->
+    </select>
+    
+    <button onclick="obtenerPrediccion()">Obtener Predicción</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        async function obtenerPrediccion() {
+            const sector = document.getElementById('sector').value;
+            try {
+                const response = await axios.get(`http://localhost:5000/prediccion?sector=${sector}`);
+                document.getElementById('resultado').innerHTML = `<img src="data:image/png;base64,${response.data.grafico}" alt="Predicción gráfica"/>`;
+            } catch (error) {
+                console.error('Error al obtener la predicción', error);
+                document.getElementById('resultado').innerHTML = 'Error al obtener la predicción';
+            }
+        }
+    </script>
+</body>
+</html>
